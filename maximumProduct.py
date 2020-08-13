@@ -20,4 +20,4 @@ def maximumProduct(self, nums: List[int]) -> int:
     max_heap = heapq.nlargest(3, nums) 
     #Or the product of max positive num and product of two(-ve) min nums =>(+ve). 
     min_heap = heapq.nsmallest(2, nums)
-    return max(a[0] * a[1] * a[2], b[0] * b[1] * a[0])
+    return max(max_heap[0] * max_heap[1] * max_heap[2], min_heap[0] * min_heap[1] * max_heap[0])

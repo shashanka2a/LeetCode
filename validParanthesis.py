@@ -19,7 +19,7 @@ Output: true
 
 
 
-def isValid(self, s: str) -> bool:
+def validParanthesis(self, s: str) -> bool:
     d = {'(':')','[':']','{':'}'}
     stack = []
     for char in s:

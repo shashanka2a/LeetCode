@@ -20,7 +20,7 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 """
 
 
-def rob(self, nums: List[int]) -> int:
+def robHouse(self, nums: List[int]) -> int:
     if len(nums)==0:
         return 0
     if len(nums)==1:

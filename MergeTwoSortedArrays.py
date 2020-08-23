@@ -41,6 +41,6 @@ def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
             p1+=1
             p2+=1
         if gap>1:
-            gap = math.ceil(g/2)
+            gap = math.ceil(gap/2)
         else:
             gap//=2

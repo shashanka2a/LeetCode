@@ -20,3 +20,15 @@ def majorityElement(self, nums):
     """
     nums.sort()
     return nums[len(nums)//2]
+
+#Moore's Voting Algo
+def majorityElement(self, nums: List[int]) -> int:
+    count, cand = 0, 0
+    for num in nums:
+        if count == 0:
+            cand = num
+        if num == cand:
+             count += 1
+        else:
+            count -= 1
+    return cand

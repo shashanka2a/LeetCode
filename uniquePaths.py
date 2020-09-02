@@ -6,10 +6,18 @@ The robot can only move either down or right at any point in time. The robot is 
 How many possible unique paths are there?
 """
 
-
 def uniquePaths(self, m: int, n: int) -> int:
     dp = [[1 for col in range(m)] for row in range(n)]
     for row in range(1,n):
         for col in range(1,m):
             dp[row][col] = dp[row-1][col]+dp[row][col-1]
     return dp[-1][-1]
+
+def uniquePathsFast(self, m, n):
+    N = n+m-2
+    r = m-1
+    res = 1
+    #nCr calculation
+    for i in range(1,r+1):
+        res = res * (N-r+i)/i
+    return int(res)

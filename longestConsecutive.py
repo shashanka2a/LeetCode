@@ -12,6 +12,11 @@ Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefor
 
 
 def longestConsecutive(self, nums: List[int]) -> int:
+    """
+    # Concept - We would have a hashmap which would store the value of num in nums
+    # We iterate through this map to check if num - 1 is also present then we know that 
+    # this is not our starting point and we keep doing this in while loop
+    """
     s = set(nums)
     max_len = 0
     for i in range(len(nums)):

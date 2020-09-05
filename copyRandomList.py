@@ -9,6 +9,12 @@ val: an integer representing Node.val
 random_index: the index of the node (range from 0 to n-1) where random pointer points to, or null if it does not point to any node.
 """
 
+# Definition for a Node.
+class Node:
+    def __init__(self, x, next=None, random=None):
+        self.val = int(x)
+        self.next = next
+        self.random = random
 
 def copyRandomList(self, head: 'Node') -> 'Node':
     if not head:

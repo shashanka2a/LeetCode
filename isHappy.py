@@ -44,3 +44,18 @@ def isHappy(self, n):
     for i in range(1,10):
         dp[i] = sol(i**2)==1
     return sol(n)==1 or dp[sol(n)]
+
+
+
+
+def isHappy(self, n):
+    """
+    Because if the algorithm sees a number it has seen before, then it follows that it will 
+    go on the same path and thus see it once again, creating an infinite loop. So a valid solution  
+    requires that all numbers seen on the way to reducing n to 1 be unique.
+    """
+    seen = set()
+    while n not in seen:
+        seen.add(n)
+        n = sum([int(x) **2 for x in str(n)])
+    return n == 1

@@ -53,3 +53,14 @@ def solve(self, A):
         if d[A[i]][0]>1 and d[A[i]][1]==mn:
             return A[i]
     return -1
+
+#Traverse from back and return the most recent repeated elemnet 
+def solve(self, A):
+    d = {}
+    res  = -1
+    for i in range(len(A)-1,-1,-1):
+        if A[i] not in d:
+            d[A[i]] = i 
+        else:
+            res = A[i]
+    return res
